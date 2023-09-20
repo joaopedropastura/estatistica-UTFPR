@@ -1,36 +1,32 @@
 # Title: Lista 05 - R
-#Q3
 
-temp <- c(26.1, 28.7, 27, 29.7, 17.3, 18.8)
+#Q3 assimetria pearson
+
+temp <- c(28.6, 16.4, 16.6, 22.3, 22.3, 17.9)
 
 media <- mean(temp)
-
 
 mediana <- median(temp)
 desv_padrao <- sd(temp)
 
 
 result <- 3 * (media - mediana) / desv_padrao
+result
 
-#Q4
+#Q4 coeficiente de curtose
 
-
-fogo <- c(1400, 484, 2991, 403, 1098, 272, 2813, 1306, 2124, 2816)
+fogo <- c(2333, 2393, 783, 455, 435, 2172, 1628, 2195, 2894, 739)
 
 list_order <- sort(fogo, decreasing = FALSE)
 
-res <- quantile(fogo, probs = c(0.1, 0.25, 0.5, 0.75, 0.9))
 
-q1 <- res[2]
-q3 <- res[4]
+q1 <- list_order[3]
+q3 <- list_order[8]
 
-p1 <- res[1]
-p9 <- res[5]
+p1 <- list_order[1]
+p9 <- list_order[9]
 
 amplitude <- (q3 - q1) / 2
 
-list_order
 
 result <- amplitude / (p9 - p1)
-
-result

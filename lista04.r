@@ -3,8 +3,6 @@ f <- c(50, 51, 52, 53, 50, 51, 52, 52, 54, 54)
 f_order <- sort(f, decreasing = FALSE)
 
 
-
-
 # lista 04
 
 #1
@@ -13,26 +11,32 @@ r <- var(filhos)
 
 #2
 
-list <- c(145, 115.3, 143.1, 121.3, 102.5, 132, 115.6, 107.1, 106, 89)
+list <- c(63, 115.8, 64.3, 116.3, 127.8, 97.3, 109.9, 128.4, 71.1, 99.8)
 
 list_order <- sort(list, decreasing = FALSE)
 
+list_order
 
 res <- quantile(list, probs = c(0.25, 0.5, 0.75))
 
-q1 <- res[1]
+q1 <- list_order[3]
 
-q3 <- res[3]
+q3 <- list_order[8]
 
+q2 <- list_order[5] + list_order[6] / 2
 
-
-amplitude <- (q3 - q1) / 2
+amplitude <- (q3 - q1)
 # list_order
 # res
+q1
+q2
+q3
 amplitude
-#3 desvio medio ??
 
-notas <- c(4.6, 5.7, 8.7, 2.6, 1.4, 7.1)
+
+#3 desvio medio
+
+notas <- c(1.5, 7.3, 4.7, 1.6, 3.9, 6.7)
 
 media_notas <- mean(notas)
 desvio <- 0
@@ -45,7 +49,8 @@ res <- desvio / length(notas)
 
 #4 desvio padrao
 
-defeitos <- c(20, 19, 6, 20, 14, 17, 11, 6)
+defeitos <- c(5, 3, 5, 13, 12, 11, 5, 2)
 
 desv_padrao <- sd(defeitos)
 
+# desv_padrao
